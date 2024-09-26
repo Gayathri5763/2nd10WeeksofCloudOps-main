@@ -25,8 +25,8 @@ pipeline {
                 dir('client') {
                     withSonarQubeEnv('sonarqube') {
                         sh ''' $SCANNER_HOME/bin/sonar-scanner \
-                        -Dsonar.projectName= Jenkinsfile-Frontend \
-                        -Dsonar.projectKey= Jenkinsfile-Frontend '''
+                        -Dsonar.projectName=Jenkinsfile-Frontend \
+                        -Dsonar.projectKey=Jenkinsfile-Frontend '''
                     }
                 }
             }
