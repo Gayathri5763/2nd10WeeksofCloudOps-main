@@ -23,7 +23,7 @@ pipeline {
         stage('Sonarqube Analysis') {
             steps {
                 dir('backend') {
-                    withSonarQubeEnv('sonar-server') {
+                    withSonarQubeEnv('sonarqube') {
                         sh ''' $SCANNER_HOME/bin/sonar-scanner \
                         -Dsonar.projectName=Jenkinsfile-Backend  \
                         -Dsonar.projectKey=Jenkinsfile-Backend  '''
