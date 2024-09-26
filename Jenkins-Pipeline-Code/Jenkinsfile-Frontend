@@ -23,7 +23,7 @@ pipeline {
         stage('Sonarqube Analysis') {
             steps {
                 dir('client') {
-                    withSonarQubeEnv('sonar-server') {
+                    withSonarQubeEnv('sonarqube') {
                         sh ''' $SCANNER_HOME/bin/sonar-scanner \
                         -Dsonar.projectName= Jenkinsfile-Frontend \
                         -Dsonar.projectKey= Jenkinsfile-Frontend '''
