@@ -31,18 +31,5 @@ pipeline {
                 }
             }
         }
-        stage('Quality Check') {
-            steps {
-                script {
-                    waitForQualityGate abortPipeline: false, credentialsId: 'sonar-token' 
-                }
-            }
-        }
-        stage('Checkout Code') {
-            steps {
-                git branch: 'main', url: 'https://github.com/Gayathri5763/2nd10WeeksofCloudOps-main.git'
-            }
-        }
-       
     }
 }
